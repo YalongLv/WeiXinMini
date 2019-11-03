@@ -1,0 +1,197 @@
+text{
+  /*超出部分....*/
+  text-overflow: ellipsis;
+  /*强制不换行*/
+  white-space: nowrap;
+}
+
+.menu{
+  position: fixed; /*固定位置*/
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu .menu_navi{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.menu .menu_navi .menu_navi_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /*主轴居中  水平*/
+  align-items: center; /*侧轴居中 垂直*/
+  border: 1rpx solid #DCDCDC;
+  font-size: 30rpx;
+  width: 35%;
+  height: 80rpx;
+
+}
+
+.menu_select{
+  color: brown;
+  background-color: springgreen;
+}
+
+.menu .menu_content{
+  width: 97.3%;
+  margin: 10rpx;
+  background-color: white;
+}
+
+.menu .menu_one{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 600rpx;
+}
+
+.menu .menu_one .left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.menu .menu_one .left .left_item{
+  padding: 15rpx;
+  line-height: 60rpx; /*设置成line-height自动垂直居中*/
+}
+
+.menu .menu_one .left .select_left{
+  color: rgb(235, 79, 79);
+  background-color: #DCDCDC;
+}
+
+.menu .menu_one .right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.menu .menu_one .right .right_item{
+  padding: 15rpx;
+  line-height: 55rpx;
+  background-color: #DCDCDC;
+}
+
+.menu .menu_one .right .select_right{
+  color: rgb(235, 79, 79);
+}
+
+.menu .menu_two{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 600rpx;
+}
+
+.menu .menu_two .top{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu .menu_two .top .top_item{
+  width: 50%;
+  line-height: 60rpx;
+  text-align: center;
+
+}
+
+.menu .menu_two .top .select_top{
+  color: red;
+  background-color: blue;
+}
+
+.menu .menu_two .bottom{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 543rpx;
+}
+
+.menu .menu_two .bottom .left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.menu .menu_two .bottom .left .left_item{
+  padding: 15rpx;
+  line-height: 60rpx; /*设置成line-height自动垂直居中*/
+}
+
+.menu .menu_two .bottom .left .select_left{
+  color: rgb(235, 79, 79);
+  background-color: #DCDCDC;
+}
+
+.menu .menu_two .bottom .right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.menu .menu_two .bottom .right .right_item{
+  padding: 15rpx;
+  line-height: 55rpx;
+  background-color: #DCDCDC;
+}
+
+.menu .menu_two .bottom .right .select_right{
+  color: rgb(235, 79, 79);
+}
+
+
+.menu .menu_three{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 600rpx;
+}
+
+
+.menu .menu_three .left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.menu .menu_three .left .left_item{
+  padding: 15rpx;
+  line-height: 60rpx; /*设置成line-height自动垂直居中*/
+}
+
+.menu .menu_three .left .select_left{
+  color: rgb(235, 79, 79);
+  background-color: #DCDCDC;
+}
+
+.menu .menu_three .right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.menu .menu_three .right .right_item{
+  padding: 15rpx;
+  line-height: 55rpx;
+  background-color: #DCDCDC;
+}
+
+.menu .menu_three .right .select_right{
+  color: rgb(235, 79, 79);
+}
+
+.menu .surplus{
+  width: 100%;
+  height: 520rpx;
+  background-color: grey;
+  opacity: 0.8;
+}
+
+

@@ -1,0 +1,73 @@
+<view class="container">
+  <!-- 菜单 -->
+  <view class="menu">
+    <!-- 菜单导航 -->
+    <view class="menu_navi">
+      <view class="menu_navi_item {{ menu_one_show ? 'menu_select':''}}"  bindtap="menuOne" >
+        <text>游戏</text>
+        <icon class="iconfont {{ menu_one_show ? 'icon-unfold':'icon-fold'}}"></icon>
+      </view>
+      <view class="menu_navi_item {{ menu_two_show ? 'menu_select':''}}"  bindtap="menuTwo">
+        <text>体育</text>
+        <icon class="iconfont {{ menu_two_show ? 'icon-unfold':'icon-fold'}}"></icon>
+      </view>
+      <view class="menu_navi_item {{ menu_three_show ? 'menu_select':''}}"  bindtap="menuThree">
+        <text>电影</text>
+        <icon class="iconfont {{ menu_three_show ? 'icon-unfold':'icon-fold'}}"></icon>
+      </view>
+    </view>
+    <!-- 某个菜单的内容 -->
+    <view class="menu_content">
+      <!-- 选项一 -->
+      <view class="menu_one" wx:if="{{menu_one_show}}">
+        <scroll-view class="left" scroll-y="true">
+          <view class="left_item {{select_left == key? 'select_left':''}} " wx:for="{{menu_one_data}}" wx:for-index="key" data-index="{{key}}" data-navi="1" wx:key="{{key}}" bindtap="selectLeft">
+            <text>{{key}}</text>
+          </view>
+        </scroll-view>
+        <scroll-view class="right" scroll-y="true">
+          <view class="right_item {{select_right == item? 'select_right':''}}" wx:for="{{select_left_content}}" data-index="{{item}}" wx:key="{{item}}" bindtap="selectRight">
+            <text>{{item}}</text>
+          </view>
+        </scroll-view>
+      </view>
+      <!-- 选项二 -->
+      <view class="menu_two" wx:if="{{menu_two_show}}">
+        <view class="top">
+          <view class="top_item {{select_top == index ? 'select_top': ''}}" wx:for="{{menu_two_data}}" data-index="{{index}}" wx:key="{{index}}" bindtap="selectTop">
+            <text>{{index}}</text>
+          </view>
+        </view>
+
+        <view class="bottom">
+          <scroll-view class="left" scroll-y="true">
+            <view class="left_item {{select_left == key? 'select_left':''}} " wx:for="{{select_top_content}}" wx:for-index="key" wx:key="{{key}}" data-navi="2" data-index="{{key}}" bindtap="selectLeft" >
+              <text>{{key}}</text>
+            </view>
+          </scroll-view>
+          <scroll-view class="right" scroll-y="true">
+            <view class="right_item {{select_right == item? 'select_right':''}}" wx:for="{{select_left_content}}" data-index="{{item}}" wx:key="{{item}}" bindtap="selectRight">
+              <text>{{item}}</text>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+      <!-- 选项三 -->
+      <view class="menu_three" wx:if="{{menu_three_show}}">
+        <scroll-view class="left" scroll-y="true">
+          <view class="left_item {{select_left == key? 'select_left':''}} " wx:for="{{menu_three_data}}" wx:for-index="key" wx:key="{{key}}" data-navi="3" data-index="{{key}}" bindtap="selectLeft" >
+            <text>{{key}}</text>
+          </view>
+        </scroll-view>
+        <scroll-view class="right" scroll-y="true">
+          <view class="right_item {{select_right == item? 'select_right':''}}" wx:for="{{select_left_content}}" data-index="{{item}}" wx:key="{{item}}" bindtap="selectRight">
+            <text>{{item}}</text>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <!-- 阴影部分 -->
+    <view class="surplus" wx:if="{{(menu_one_show)||(menu_two_show)||(menu_three_show)}}" bindtap="menuFlod"></view>
+  </view>
+
+</view>
